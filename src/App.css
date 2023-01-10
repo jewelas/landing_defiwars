@@ -1,0 +1,857 @@
+.appContainer {
+  display: flex;
+  justify-content: center;
+  padding: 30px;
+  background: url("./assets/images/sword-bgv2.png") repeat center;
+  background-repeat: repeat;
+  min-height: 100vh;
+  width: 100vw;
+  background-size: contain;
+}
+
+input {
+  outline: none;
+}
+
+.App {
+  position: relative;
+  width: 100%;
+  max-width: 1440px;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  position: relative;
+}
+
+@media (max-width: 600px) {
+  .header {
+    justify-content: space-between;
+  }
+
+  .launchBtnContainer {
+    position: relative;
+  }
+}
+
+.logoImg {
+  width: 155px;
+  height: 73px;
+  filter: drop-shadow(-3px 2px 6px #FFC803);
+}
+
+.alpha {
+  font-family: 'PressStart2P';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 12px;
+  /* identical to box height */
+
+  letter-spacing: 0.08em;
+
+  color: #FFFFFF;
+
+  text-shadow: -1px 1px 20px #48F2FF;
+  text-transform: capitalize;
+}
+
+@font-face {
+  font-family: Orbitron;
+  src: url("./assets/fonts/Orbitron-Regular.ttf");
+}
+
+@font-face {
+  font-family: PressStart2P;
+  src: url("./assets/fonts/Press_Start_2P/PressStart2P-Regular.ttf");
+}
+
+.launchBtnContainer {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+}
+
+.launchBtnBox {
+  position: relative;
+  padding: 2px;
+  background-color: #FF43AF;
+  clip-path: polygon(10% 0%, 100% 0%, 100% 85%, 90% 100%, 0% 100%, 0% 15%);
+  z-index: 1;
+}
+
+.launchBtn {
+  position: relative;
+  font-family: 'Orbitron';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 12px;
+  line-height: 15px;
+  padding: 15px;
+  background: black;
+
+
+  text-align: justify;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+
+  color: #9BF8FF;
+  cursor: pointer;
+  z-index: 1;
+  display: block;
+  clip-path: polygon(10% 0%, 100% 0%, 100% 85%, 90% 100%, 0% 100%, 0% 15%);
+}
+
+.launchBtnFilter {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  filter: blur(20px);
+  background-color: #FF43AF;
+  top: 0px;
+  left: 0px;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  row-gap: 30px;
+  padding: 100px 0px;
+}
+
+.defiWarsFinance {
+  width: 100%;
+  background-image: url("./assets/images/defiwarsFinanceBorder.png");
+  background-size: 100% 100%;
+  padding: 90px 120px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 70px;
+}
+
+.tokenomics {
+  width: 100%;
+  background-image: url("./assets/images/tokenomicsBorder.png");
+  background-size: 100% 100%;
+  padding: 90px 120px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 70px;
+}
+
+.warfare {
+  width: 100%;
+  background-image: url("./assets/images/warfareBorder.png");
+  background-size: 100% 100%;
+  padding: 90px 120px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 50px;
+  position: relative;
+}
+
+@media (max-width: 800px) {
+  .warfare>.stakingAPY {
+    padding-left: 30px !important;
+  }
+}
+
+@media (max-width: 1000px) {
+  .defiWarsFinance {
+    background-image: url("./assets/images/defiwarsFinanceBorder_V.png");
+  }
+
+  .tokenomics {
+    background-image: url("./assets/images/tokenomicsBorder_V.png");
+  }
+
+  .warfare {
+    background-image: url("./assets/images/warfareBorder_V.png");
+  }
+}
+
+@media (max-width: 800px) {
+  .defiWarsFinance {
+    padding: 80px 40px;
+  }
+
+  .tokenomics {
+    padding: 80px 40px;
+  }
+
+  .warfare {
+    padding: 80px 40px;
+  }
+}
+
+.team {
+  width: 100%;
+  padding: 90px 120px;
+  position: relative;
+}
+
+.follow {
+  width: 100%;
+  padding: 90px 120px;
+  position: relative;
+}
+
+@media (max-width: 600px) {
+  .follow, .team {
+    padding: 90px 20px;
+  }
+}
+
+.followTitle {
+  font-family: 'PressStart2P';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 20px;
+  padding-bottom: 30px;
+  /* identical to box height */
+
+  letter-spacing: 0.08em;
+
+  color: #48F2FF;
+
+  text-shadow: 0px 4px 4px #EB72FF;
+  position: absolute;
+  bottom: 100%;
+  right: 0px;
+}
+
+@media (max-width: 1377px) {
+  .followTitle {
+    right: 50%;
+    transform: translateX(50%);
+  }
+}
+
+.teamTitle {
+  display: flex;
+  justify-content: flex-end;
+  font-family: 'PressStart2P';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 28px;
+  padding: 20px 0px;
+  /* identical to box height */
+
+  letter-spacing: 0.08em;
+
+  color: #9BF8FF;
+
+  text-shadow: 0px 4px 4px #FCAC01;
+}
+
+@media (max-width: 1110px) {
+  .teamTitle {
+    text-align: center;
+    justify-content: center;
+  }
+}
+
+.membersContainer {
+  display: flex;
+  flex-direction: column;
+  row-gap: 50px;
+  overflow: hidden;
+}
+
+.membersRow {
+  display: flex;
+  justify-content: center;
+  column-gap: 50px;
+}
+
+.member {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 10px;
+}
+
+.memberImg {
+  width: 168px;
+}
+
+.memberName {
+  font-family: 'PressStart2P';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 148%;
+  text-align: center;
+  /* identical to box height, or 18px */
+
+  letter-spacing: 0.04em;
+
+  color: #FFFFFF;
+
+}
+
+.justifyCenter {
+  display: flex;
+  justify-content: center;
+}
+
+.contact {
+  max-width: 920px;
+  width: 100%;
+}
+
+.contactTitle {
+  font-family: 'PressStart2P';
+  padding-bottom: 50px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 28px;
+  /* identical to box height */
+
+  letter-spacing: 0.08em;
+
+  color: #FF70C2;
+
+  text-shadow: -1px 1px 13px #48F2FF;
+}
+
+@media (max-width: 1040px) {
+  .contactTitle {
+    text-align: center;
+  }
+}
+
+.tokenomicsTitle {
+  font-family: 'PressStart2P';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 28px;
+
+  color: #48F2FF;
+
+  text-shadow: 0px 4px 4px #FF70C2;
+}
+
+@media (max-width: 1000px) {
+  .tokenomicsTitle {
+    text-align: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .tokenomicsTitle {
+    text-align: center;
+    font-size: 24px;
+  }
+}
+
+.nftClaiming {
+  position: absolute;
+  right: 10vw;
+  bottom: 200px;
+  font-family: 'PressStart2P';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 24px;
+  /* identical to box height */
+
+  letter-spacing: 0.08em;
+
+  color: #8972FF;
+
+  text-shadow: -1px 1px 20px #48F2FF;
+}
+
+@media (max-width: 800px) {
+  .nftClaiming {
+    bottom: 50px;
+    font-size: 18px;
+  }
+}
+
+.tokenomicsImg {
+  max-width: 677px;
+}
+
+.financeTitle {
+  font-family: 'PressStart2P';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 32px;
+  /* identical to box height */
+
+  letter-spacing: 0.08em;
+
+  color: #EB72FF;
+
+  text-shadow: -1px 1px 20px #48F2FF;
+}
+
+@media (max-width: 1000px) {
+  .financeTitle {
+    text-align: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .financeTitle {
+    text-align: center;
+    font-size: 24px;
+  }
+}
+
+.warfareTitle {
+  font-family: 'PressStart2P';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 28px;
+  letter-spacing: 0.08em;
+
+  color: #EB72FF;
+
+  text-shadow: -1px 1px 20px #48F2FF;
+}
+
+@media (max-width: 600px) {
+  .warfareTitle {
+    font-size: 24px;
+  }
+}
+
+.apy {
+  font-family: 'PressStart2P';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 24px;
+  /* identical to box height */
+
+  letter-spacing: 0.08em;
+
+  color: #FFFFFF;
+
+  text-shadow: -1px 1px 20px #48F2FF;
+}
+
+.staking {
+  font-family: 'PressStart2P';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 24px;
+  padding-right: 50px;
+  /* identical to box height */
+
+  letter-spacing: 0.08em;
+
+  color: #FFC803;
+
+  text-shadow: -1px 1px 20px #48F2FF;
+}
+
+@media (max-width: 600px) {
+  .apy {
+    font-size: 18px;
+  }
+
+  .staking {
+    font-size: 18px;
+  }
+}
+
+.contentMain {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+@media (max-width: 1000px) {
+  .contentMain {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+}
+
+.financeDescription {
+  max-width: 450px;
+  font-family: 'PressStart2P';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 148%;
+  /* or 21px */
+
+  text-align: justify;
+  letter-spacing: 0.04em;
+
+  color: #FFFFFF;
+}
+
+@media (max-width: 1150px) {
+  .financeDescription {
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 600px) {
+  .financeDescription {
+    max-width: 200px;
+  }
+}
+
+.financeImg {
+  width: 400px;
+}
+
+@media (max-width: 800px) {
+  .financeImg {
+    width: 250px;
+  }
+}
+
+@media (max-width: 600px) {
+  .financeImg {
+    width: 200px;
+  }
+}
+
+.tokenomicsContent {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 1000px) {
+  .tokenomicsContent {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+}
+
+.tokenomicsItem {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 0px;
+  row-gap: 30px;
+  position: relative;
+}
+
+.tokenomicsItems>div {
+  font-family: 'PressStart2P';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 16px;
+  padding: 15px 0px;
+  /* identical to box height */
+
+  letter-spacing: 0.08em;
+
+  color: #FFFFFF;
+
+  text-shadow: -1px 1px 20px #48F2FF;
+}
+
+@media (max-width: 1000px) {
+  .tokenomicsItems>div {
+    padding-left: 0px !important;
+  }
+}
+
+.polp {
+  font-family: 'PressStart2P';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 16px;
+  /* identical to box height */
+
+  letter-spacing: 0.08em;
+
+  color: #FFFFFF;
+
+  text-shadow: -1px 1px 20px #48F2FF;
+}
+
+.swap {
+  max-width: 400px;
+}
+
+@media (max-width: 800px) {
+  .swap {
+    width: 250px;
+  }
+}
+
+.dwarfSwap {
+  font-family: 'PressStart2P';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 28px;
+  letter-spacing: 0.08em;
+  position: absolute;
+  right: 30px;
+  bottom: 100%;
+
+  color: #FCAC01;
+
+  text-shadow: 3px -2px 20px #48F2FF;
+}
+
+@media (max-width: 1000px) {
+  .dwarfSwap {
+    right: 50%;
+    transform: translateX(50%);
+  }
+}
+
+@media (max-width: 600px) {
+  .dwarfSwap {
+    right: 50%;
+    transform: translateX(50%);
+    font-size: 24px;
+  }
+}
+
+.flexWrap {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 20px;
+}
+
+.alignEnd {
+  align-items: flex-end;
+}
+
+.copyright {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+  align-items: center;
+}
+
+.copyrightText {
+  font-family: 'PressStart2P';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 148%;
+  /* or 15px */
+
+  text-align: center;
+  letter-spacing: 0.04em;
+
+  color: #FFFFFF;
+
+}
+
+.flexSpaceBetween {
+  display: flex;
+  justify-content: space-between;
+  column-gap: 20px;
+}
+
+.contactContainer {
+  display: flex;
+  justify-content: space-between;
+  column-gap: 20px;
+}
+
+@media (max-width: 1040px) {
+  .contactContainer {
+    flex-direction: column;
+    row-gap: 20px;
+    align-items: center;
+  }
+}
+
+.contactDescription {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 300px;
+  row-gap: 50px;
+  font-family: 'PressStart2P';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 148%;
+  /* or 21px */
+
+  letter-spacing: 0.04em;
+
+  color: #FFFFFF;
+}
+
+.contactInputContainer {
+  width: 460px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 15px;
+}
+
+@media (max-width: 600px) {
+  .contactInputContainer {
+    width: 100%;
+  }
+}
+
+.contactInput {
+  height: 52px;
+  width: 216px;
+  border: 1px solid #C5FBFF;
+  background-color: #E8FDFF;
+  padding: 15px;
+  font-family: 'Orbitron';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  /* identical to box height */
+
+  letter-spacing: 0.08em;
+
+  color: #000000;
+}
+
+.sendBtn {
+  width: 100%;
+  height: 52px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Bungee';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 0.08em;
+  background-image: url("./assets/images/send.png");
+  background-size: 100% 100%;
+  filter: drop-shadow(3px 3px 10px #7B61FF);
+
+
+  color: #FFFFFF;
+  cursor: pointer;
+  position: relative;
+  z-index: 5;
+}
+
+.sendBtnFilter {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  background-color: transparent;
+  filter: drop-shadow(3px 3px 10px #7B61FF);
+}
+
+.sendBtnContainer {
+  position: relative;
+}
+
+.privacy {
+  font-family: 'PressStart2P';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 148%;
+  /* identical to box height, or 15px */
+
+  letter-spacing: 0.04em;
+
+  color: #FFFFFF;
+
+}
+
+@media (max-width: 1377px) {
+  .privacy {
+    padding: 10px 0px;
+  }
+}
+
+.links {
+  display: flex;
+  justify-content: center;
+  column-gap: 50px;
+  padding-bottom: 30px;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.footerContainer {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 20px;
+  align-items: flex-end;
+}
+
+@media (max-width: 1377px) {
+  .footerContainer {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.linksContainer {
+  position: relative;
+  margin-top: 50px;
+}
+
+.footerImg {
+  width: 435px;
+}
+
+@media (max-width: 650px) {
+  .footerImg {
+    width: 300px;
+  }
+}
